@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.realhorrorfan.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/main_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="are you a real horror movie fan?"
+            android:textAllCaps="true"
+            android:textSize="35dp"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:layout_margin="20dp"/>
+
+        <TextView
+            android:id="@+id/question_no1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. from which halloween movie is this picture?"
+            android:textAllCaps="true"
+            android:textSize="20dp"
+            android:textColor="#212121"
+            android:textAlignment="center"
+            android:layout_margin="20dp"/>
+
+        <ImageView
+            android:id="@+id/halloween_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/halloween4"
+            android:layout_margin="20dp"
+            android:adjustViewBounds="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="20dp">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/halloween_answer1"
+                    android:onClick="answerOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Halloween I"
+                    android:textColor="#212121"
+                    android:layout_margin="20dp"
+                    android:textAlignment="center"/>
+
+                <RadioButton
+                    android:id="@+id/halloween_answer2"
+                    android:onClick="answerOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Halloween III"
+                    android:textColor="#212121"
+                    android:layout_margin="20dp"
+                    android:textAlignment="center"/>
+
+                <RadioButton
+                    android:id="@+id/halloween_answer3"
+                    android:onClick="answerOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Halloween H20"
+                    android:textColor="#212121"
+                    android:layout_margin="20dp"
+                    android:textAlignment="center"/>
+
+                <RadioButton
+                    android:id="@+id/halloween_answer4"
+                    android:onClick="answerOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Halloween IV"
+                    android:textColor="#212121"
+                    android:layout_margin="20dp"
+                    android:textAlignment="center"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/question1_feedback"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="15dp"
+                android:layout_weight="4"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/question1_points_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Points for question"
+                android:textSize="15dp"
+                android:layout_weight="2"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/question1_points"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/question_no2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. which of these names really exist?"
+            android:textAllCaps="true"
+            android:textSize="20dp"
+            android:textColor="#212121"
+            android:textAlignment="center"
+            android:layout_margin="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+
+            <CheckBox
+                android:id="@+id/check_answer1"
+                android:onClick="answerTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="C.H.U.D.: Cannibalistic Humanoid Underground Dwellers"
+                android:textColor="#212121"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_margin="20dp"/>
+
+            <CheckBox
+                android:id="@+id/check_answer2"
+                android:onClick="answerTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fertilize the Blaspheming Bombshell!"
+                android:textColor="#212121"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_margin="20dp"/>
+
+            <CheckBox
+                android:id="@+id/check_answer3"
+                android:onClick="answerTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hollywood Chainsaw Hookers"
+                android:textColor="#212121"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_margin="20dp"/>
+
+            <CheckBox
+                android:id="@+id/check_answer4"
+                android:onClick="answerTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Monsturd"
+                android:textColor="#212121"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_margin="20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/question2_feedback"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="15dp"
+                android:layout_weight="4"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/question2_points_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Points for question"
+                android:textSize="15dp"
+                android:layout_weight="2"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/question2_points"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/question_no3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. write down the name of this guy"
+            android:textAllCaps="true"
+            android:textSize="20dp"
+            android:textColor="#212121"
+            android:textAlignment="center"
+            android:layout_margin="20dp"/>
+
+        <ImageView
+            android:id="@+id/pyramidHead_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pyramidhead"
+            android:layout_margin="20dp"
+            android:adjustViewBounds="true"/>
+
+        <EditText
+            android:id="@+id/pyramidHead_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hint: no Hint! You gotta know this!"
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords"
+            android:maxLines="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/question3_feedback"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="15dp"
+                android:layout_weight="4"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/question3_points_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Points for question"
+                android:textSize="15dp"
+                android:layout_weight="2"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/question3_points"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/question_no4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. and this one?"
+            android:textAllCaps="true"
+            android:textSize="20dp"
+            android:textColor="#212121"
+            android:textAlignment="center"
+            android:layout_margin="20dp"/>
+
+        <ImageView
+            android:id="@+id/paleMan_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/paleman"
+            android:layout_margin="20dp"
+            android:adjustViewBounds="true"/>
+
+        <EditText
+            android:id="@+id/paleMan_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hint: you get kinda pale when u see him"
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords"
+            android:maxLines="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/question4_feedback"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="15dp"
+                android:layout_weight="4"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/question4_points_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Points for question"
+                android:textSize="15dp"
+                android:layout_weight="2"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/question4_points"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/question_no5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5. this ones you'll never guess!!!"
+            android:textAllCaps="true"
+            android:textSize="20dp"
+            android:textColor="#212121"
+            android:textAlignment="center"
+            android:layout_margin="20dp"/>
+
+        <ImageView
+            android:id="@+id/theToiletGhoul_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/thetoiletghoul"
+            android:layout_margin="20dp"
+            android:adjustViewBounds="true"/>
+
+        <EditText
+            android:id="@+id/theToiletGhoul_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hint: his name starts with 'the'"
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords"
+            android:maxLines="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/question5_feedback"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="15dp"
+                android:layout_weight="4"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/question5_points_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Points for question"
+                android:textSize="15dp"
+                android:layout_weight="2"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/question5_points"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/total_points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="30dp"
+            android:textColor="#212121"
+            android:textAlignment="center"
+            android:layout_margin="30dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
